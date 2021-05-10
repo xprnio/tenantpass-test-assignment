@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  users-service:
+    build:
+      context: users-service
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    environment:
+      PORT: 3000
+#  message-service:
+#    build:
+#      context: message-service
+#      dockerfile: Dockerfile
+#    ports:
+#      - 3100:3000
+#    environment:
+#      PORT: 3000
