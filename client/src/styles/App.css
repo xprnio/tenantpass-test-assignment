@@ -1,0 +1,161 @@
+.app {
+  height: 100vh;
+}
+
+.app,
+.avatar,
+.submit-message {
+  display: grid;
+  place-items: center;
+}
+
+.auth-form,
+.auth-inputs,
+.messages {
+  display: flex;
+  flex-direction: column;
+}
+
+nav,
+.message-form {
+  display: flex;
+  align-items: center;
+}
+
+.auth-form {
+  align-items: center;
+  width: 350px;
+}
+
+.auth-inputs {
+  width: 100%;
+}
+
+.auth-input {
+  padding: 0.75rem;
+  border: 1px solid #cccccc;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.auth-input::placeholder {
+  color: #999999;
+}
+
+.auth-input:first-of-type {
+  margin-bottom: 0.75rem;
+}
+
+.auth-submit {
+  margin: 1rem 0 2rem 0;
+  padding: 0.5rem 0 0.5rem 0;
+  border: 1px solid #00d1ff;
+  background: #00d1ff;
+  color: #e9f4ff;
+  font-size: 2rem;
+}
+
+.auth-submit,
+span[role="button"] {
+  cursor: pointer;
+  text-align: center;
+}
+
+nav {
+  justify-content: space-between;
+  height: 64px;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  background: #e9f4ff;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.message-form {
+  gap: 1rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  width: 100vw;
+  padding: 0 1rem;
+}
+
+.message {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 209, 255, 0.5);
+  border-radius: 12px;
+}
+
+.message::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.message:active,
+.message:focus {
+  outline: none;
+  border: 1px solid rgba(0, 209, 255, 1);
+}
+
+.message,
+.submit-message {
+  min-height: 64px;
+}
+
+.submit-message {
+  height: 64px;
+  width: 64px;
+  border: none;
+  border-radius: 12px;
+  background: #00d1ff;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .submit-message {
+    width: 82px;
+  }
+}
+
+.messages {
+  justify-content: flex-end;
+  height: calc(100vh - 150px);
+}
+
+.single-message {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  padding: 1rem;
+}
+
+.single-message:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  margin-right: 1rem;
+  background: #666666;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.message-content {
+  margin-top: 0.5rem;
+}
